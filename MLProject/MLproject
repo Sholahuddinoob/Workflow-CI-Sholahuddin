@@ -1,9 +1,11 @@
-name: attrition_ci_project
+name: mlflow-project
 
-conda_env: conda.yaml
+docker_env:
+  image: python:3.10
 
 entry_points:
   main:
     parameters:
       C: {type: float, default: 1.0}
-    command: "python modelling.py --C {C}"
+    command: >
+      python modelling.py --C {C}
