@@ -1,7 +1,5 @@
 name: mlflow-project
 
-python_env: system
-
 entry_points:
   main:
     parameters:
