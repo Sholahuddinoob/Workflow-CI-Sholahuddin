@@ -1,7 +1,6 @@
 name: mlflow-project
 
-# Gunakan file requirements.txt
-pip_requirements: requirements.txt
+python_env: system
 
 entry_points:
   main:
