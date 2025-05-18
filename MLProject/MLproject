@@ -8,4 +8,4 @@ entry_points:
     parameters:
       C: {type: float, default: 1.0}
     command: >
-      python MLProject/modelling.py --C {C}
+      python modelling.py --C {C}
