@@ -1,4 +1,4 @@
-name: CI Advanced Training
+name: CI Advanced Training ML
 
 on:
   push:
