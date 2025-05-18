@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--C", type=float, default=1.0)
 args = parser.parse_args()
 
-df = pd.read_csv("CI_CD_MLflow/employee_data_preprocessing.csv")
+df = pd.read_csv("employee_data_preprocessing/employee_data_preprocessing.csv")
 X = df.drop("Attrition", axis=1)
 y = df["Attrition"]
 
