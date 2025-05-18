@@ -63,7 +63,7 @@ jobs:
     - name: Build Docker Image
       shell: bash -l {0}
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/attrition-model:latest MLProject
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/attrition-model:latest .
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
