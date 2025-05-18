@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Sholahuddin/Documents/GitHub/Workflow-CI-Sholahuddin/mlruns/0/263f0083d2b442e68c8c3d7007edfa1b/artifacts
+end_time: 1747566404332
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 263f0083d2b442e68c8c3d7007edfa1b
+run_name: adaptable-doe-189
+run_uuid: 263f0083d2b442e68c8c3d7007edfa1b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747566138387
+status: 4
+tags: []
+user_id: Sholahuddin

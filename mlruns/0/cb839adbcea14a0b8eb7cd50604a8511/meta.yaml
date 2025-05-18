@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Sholahuddin/Documents/GitHub/Workflow-CI-Sholahuddin/mlruns/0/cb839adbcea14a0b8eb7cd50604a8511/artifacts
+end_time: 1747566557873
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb839adbcea14a0b8eb7cd50604a8511
+run_name: worried-foal-896
+run_uuid: cb839adbcea14a0b8eb7cd50604a8511
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747566534442
+status: 4
+tags: []
+user_id: Sholahuddin
