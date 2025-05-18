@@ -1,8 +1,4 @@
 name: mlflow-project
-
-docker_env:
-  image: python:3.10
-
 entry_points:
   main:
     parameters:
