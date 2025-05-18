@@ -24,6 +24,7 @@ jobs:
     - name: Check Python Environment
       shell: bash -l {0}
       run: |
+        which python
         python --version
         pip --version
 
@@ -53,12 +54,13 @@ jobs:
       continue-on-error: true
 
     - name: Upload model artifacts to GitHub
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: model-artifacts
         path: model_artifacts.tar.gz
 
     - name: Build Docker Image
+      shell: bash -l {0}
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/attrition-model:latest MLProject
 
@@ -69,10 +71,12 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Tag Docker Image
+      shell: bash -l {0}
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/attrition-model:latest ${{ secrets.DOCKER_USERNAME }}/attrition-model:v1
 
     - name: Push Docker Image
+      shell: bash -l {0}
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/attrition-model:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/attrition-model:v1

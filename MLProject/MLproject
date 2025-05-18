@@ -1,9 +1,0 @@
-name: logistic-attrition
-conda_env: conda.yaml
-
-entry_points:
-  main:
-    parameters:
-      data_path: {type: str, default: "employee_data_preprocessing/employee_data_preprocessing.csv"}
-      C: {type: float, default: 1.0}
-    command: "python modelling.py --data_path {data_path} --C {C}"
