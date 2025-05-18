@@ -19,7 +19,8 @@ jobs:
       with:
         auto-update-conda: true
         python-version: 3.12
-        activate-environment: base
+        activate-environment: mlflow-env
+        environment-name: mlflow-env
 
     - name: Check Python Environment
       shell: bash -l {0}
