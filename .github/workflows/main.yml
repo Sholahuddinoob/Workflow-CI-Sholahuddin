@@ -1,4 +1,4 @@
-name: CI Advanced Training ML - TEST
+name: CI Advanced Training ML
 
 on:
   push:
@@ -14,31 +14,38 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Python 3.12.7
-      uses: actions/setup-python@v4
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v2
       with:
-        python-version: '3.12.7'
+        auto-update-conda: true
+        python-version: 3.12
+        activate-environment: base
 
     - name: Check Python Environment
+      shell: bash -l {0}
       run: |
         python --version
         pip --version
 
     - name: Install Python Dependencies
+      shell: bash -l {0}
       run: |
         pip install mlflow pandas scikit-learn
 
     - name: Run MLflow Project
+      shell: bash -l {0}
       run: |
         cd MLProject
         mlflow run . -P data_path=employee_data_preprocessing/employee_data_preprocessing.csv -P C=1.0
 
     - name: Get Latest MLflow run_id
+      shell: bash -l {0}
       run: |
         echo "Last Run ID:"
         ls -ltR mlruns || true
 
     - name: Archive MLflow Artifacts
+      shell: bash -l {0}
       run: |
         mkdir -p upload_model
         cp -r MLProject/mlruns upload_model/
@@ -46,7 +53,7 @@ jobs:
       continue-on-error: true
 
     - name: Upload model artifacts to GitHub
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: model-artifacts
         path: model_artifacts.tar.gz
