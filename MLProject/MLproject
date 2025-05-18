@@ -1,4 +1,9 @@
+
 name: mlflow-project
+
+python_env:
+  system_site_packages: false
+
 entry_points:
   main:
     parameters:
