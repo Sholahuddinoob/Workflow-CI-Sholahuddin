@@ -1,0 +1,1 @@
+https://hub.docker.com/repository/docker/sholahuddin27/attrition-model/general
